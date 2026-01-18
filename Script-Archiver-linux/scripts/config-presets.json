@@ -1,0 +1,88 @@
+{
+  "presets": {
+    "default": {
+      "name": "Default Configuration",
+      "description": "Basic settings for most common use cases",
+      "settings": {
+        "createArchives": true,
+        "createESP": true,
+        "createOverrides": true,
+        "compressArchives": false,
+        "moveCompiled": false,
+        "moveArchives": true,
+        "cleanup": true,
+        "enableConflictAnalysis": false,
+        "ConflictAnalysisAction": "6",
+        "proceedWithConsolidation": true,
+        "archiveMode": "1",
+        "gameFormat": "1",
+        "originalFileAction": "3",
+        "moveToBackup": true,
+        "modSelectionMode": "all"
+      }
+    },
+    "quick": {
+      "name": "Quick Processing",
+      "description": "Minimal prompts, maximum automation",
+      "settings": {
+        "createArchives": true,
+        "createESP": true,
+        "createOverrides": true,
+        "compressArchives": false,
+        "moveCompiled": true,
+        "moveArchives": true,
+        "cleanup": true,
+        "enableConflictAnalysis": false,
+        "ConflictAnalysisAction": "6",        
+        "proceedWithConsolidation": true,
+        "archiveMode": "1",
+        "gameFormat": "1",
+        "originalFileAction": "3",
+        "moveToBackup": true,
+        "modSelectionMode": "all"
+      }
+    },
+    "conservative": {
+      "name": "Conservative Settings",
+      "description": "Safe settings with conflict analysis enabled",
+      "settings": {
+        "createArchives": true,
+        "createESP": true,
+        "createOverrides": true,
+        "compressArchives": false,
+        "moveCompiled": true,
+        "moveArchives": true,
+        "cleanup": false,
+        "enableConflictAnalysis": true,
+        "ConflictAnalysisAction": "6",
+        "proceedWithConsolidation": true,
+        "archiveMode": "1",
+        "gameFormat": "1",
+        "originalFileAction": "3",
+        "moveToBackup": false,
+        "modSelectionMode": "all"
+      }
+    },
+    "manual": {
+      "name": "Manual Selection",
+      "description": "Enable manual mod selection with conflict analysis",
+      "settings": {
+        "createArchives": true,
+        "createESP": true,
+        "createOverrides": true,
+        "compressArchives": false,
+        "moveCompiled": true,
+        "moveArchives": true,
+        "cleanup": true,
+        "enableConflictAnalysis": true,
+        "ConflictAnalysisAction": "6",
+        "proceedWithConsolidation": true,
+        "archiveMode": "1",
+        "gameFormat": "1",
+        "originalFileAction": "3",
+        "moveToBackup": true,
+        "modSelectionMode": "manual"
+      }
+    }
+  }
+}

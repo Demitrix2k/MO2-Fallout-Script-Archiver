@@ -1,0 +1,75 @@
+This is a standalone command line version of BSArchPro﻿ tool.
+
+Supported games (archive versions):
+
+    Morrowind
+    Oblivion
+    Fallout 3 and Fallout New Vegas
+    Skyrim LE
+    Skyrim Special Edition
+    Fallout 4 General
+    Fallout 4 DDS textures
+
+
+
+BSArch v0.7 by Zilav, Sheson and ElminsterAU
+Packer and unpacker for Bethesda Game Studios archive files
+
+ARCHIVE INFO
+bsarch.exe <archive> [parameters]
+<archive> - archive file name to view
+additional parametes: -list to show files list or -dump for extended dump
+
+UNPACKING ARCHIVES
+bsarch.exe unpack <archive> <folder>
+<archive> - archive file name to unpack
+<folder> - path to the existing destination folder to unpack into
+When not set unpack into the folder where archive is located
+Parameters:
+-q[uiet] Don't list extracted files
+-mtRun multi-threaded
+
+CREATING ARCHIVES
+bsarch.exe pack <folder> <archive> [parameters]
+<folder> - path to the source folder with files to pack
+<archive> - archive file name to create
+Parameters:
+-tes3 Morrowind archive format
+-tes4 Oblivion archive format
+-fo3 Fallout 3 archive format
+-fnv Fallout: New Vegas archive format
+-tes5 Skyrim LE archive format (fo3/fnv/tes5 are technically the same)
+-sse Skyrim Special Edition archive format
+-fo4 Fallout 4 General archive format
+-fo4dds Fallout 4 DDS archive format (streamed DDS textures mipmaps)
+-af:valueOverride archive flags with a hex value
+Oblivion, Fallout 3/NV and Skyrim LE archives only
+-ff:valueOverride files flags with a hex value
+Oblivion, Fallout 3/NV and Skyrim LE archives only
+-z Compress archive. This will also force "Compressed" flag
+in archive flags even if they are overridden with -af
+parameter custom value. Keep in mind that sounds and voices
+don't work in compressed archives in all Bethesda games!
+Even if your archive contains a single sound/voice file
+out of thousands, it must be uncompressed.
+-shareBinary identical files will share the same data
+in archive to preserve space.
+-mtRun multi-threaded
+
+EXAMPLES
+If <folder> or <archive> include spaces then embed them in quotes
+
+* Show archive info including hex flags values to be used with -af and -ff
+bsarch d:\somepath\somefile.bsa
+* Dump extended files information from archive
+bsarch "d:\game\mod - main.bsa" -dump
+* Unpack archive into the same folder where archive is located
+bsarch unpack d:\mymod\new.bsa
+* Unpack archive into the specified folder
+bsarch unpack d:\mymod\new.bsa "d:\unpacked archive\data"
+* Create Skyrim Special Edition compressed archive
+bsarch pack "d:\my mod\data" "d:\my mod\data\new.bsa" -sse -z
+* Create Fallout New Vegas uncompressed archive with custom flags
+bsarch pack "d:\my mod\data" "d:\my mod\new.bsa" -fnv -af:0x83 -ff:0x113
+* Create Fallout 4 compressed textures archive
+bsarch pack "d:\my mod\data" "d:\my mod\new.ba2" -fo4dds -z
