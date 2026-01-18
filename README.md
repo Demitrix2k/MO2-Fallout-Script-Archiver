@@ -1,5 +1,5 @@
 <p align="center">
-	<img width="773" height="760" alt="Courier" src="https://github.com/user-attachments/assets/0dcbcb41-70db-47ee-b811-b99554533e90" />
+	<img width="128" alt="Courier" src="https://github.com/user-attachments/assets/0dcbcb41-70db-47ee-b811-b99554533e90" />
 </p>
 <h1 align="center">Script Archiver</h1>
 <p align="center">Consolidate MO2 mods into fast, tidy BSA archives</p>
